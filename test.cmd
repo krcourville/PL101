@@ -1,1 +1,1 @@
-jasmine-node spec --autotest --color --growl
+jasmine-node spec --autotest --color --growl --captureExceptions --watch ./js/scheemgrammar.pegjs --watch ./js

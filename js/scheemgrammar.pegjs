@@ -1,6 +1,8 @@
 start = expression
     
-expression = atom / expressionList 
+expression = 
+    atom 
+    / expressionList 
 
 expressionList =
     "(" e:expression+ ")"
@@ -12,10 +14,15 @@ validchar
 
 space = " "
 
+whitespace = 
+    space 
+    / "\t" 
+    / "\n"
+
 token = 
     a:atom space?
     { return a; }
 
 atom =
-    chars:validchar+ space?
+    whitespace* chars:validchar+ whitespace*
         { return chars.join(""); }
