@@ -30,4 +30,11 @@ describe("scheem parser", function () {
         var parsed = scheem("  123\t \n  ");
         expect(parsed).toEqual("123");
     });
+
+    it("should allow whitespace around parens", function () {
+        var parsed = scheem(" \t( 123 + abc )\n");
+        expect(parsed).toEqual(
+            ["123", "+", "abc"]
+        );
+    });
 });

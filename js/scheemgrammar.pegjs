@@ -5,7 +5,7 @@ expression =
     / expressionList 
 
 expressionList =
-    "(" e:expression+ ")"
+    ws* "(" ws* e:expression+ ws* ")" ws*
     { return e; }
 
 
@@ -14,7 +14,7 @@ validchar
 
 space = " "
 
-whitespace = 
+ws = 
     space 
     / "\t" 
     / "\n"
@@ -24,5 +24,5 @@ token =
     { return a; }
 
 atom =
-    whitespace* chars:validchar+ whitespace*
+    ws* chars:validchar+ ws*
         { return chars.join(""); }
