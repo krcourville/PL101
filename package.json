@@ -1,0 +1,26 @@
+{
+  "name": "PL101",
+  "version": "0.0.0",
+  "description": "PL101 source code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krcourville/PL101.git"
+  },
+  "keywords": [
+    "PL101"
+  ],
+  "author": "Ken Courville",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krcourville/PL101/issues"
+  },
+  "homepage": "https://github.com/krcourville/PL101",
+  "devDependencies": {
+    "jasmine-node": "~1.14.5",
+    "pegjs": "~0.8.0"
+  }
+}
